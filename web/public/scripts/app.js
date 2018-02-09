@@ -10,34 +10,44 @@ update occure in the other browsers.
 let fikit = angular.module("fikit",["firebase"]);
 
 fikit.controller("BoardingProcessManagerController",["$scope","$firebaseArray",($scope,$firebaseArray)=>{
-    var ref = firebase.database().ref().child("items");
-    $scope.items = $firebaseArray(ref);
-    console.log($scope.items);
+    // 'HouseBoat' would be defined when a user logs in.
+    // The boarding list belongs to the property and not to the user.
+    let ref = firebase.database().ref().child("/Properties/HouseBoat/bordingList"); //Create a link to firebase
+    $scope.items = $firebaseArray(ref); //Bind firebase to Angular Scope
 
 
+    //Function to add an item to Firebase
     $scope.addItem = ()=>{
-        console.log("Adding an item");
-        console.log($scope.items);
-        $scope.items.$add({name:$scope.new_name,description:$scope.new_description, inputType:$scope.new_input});
+        $scope.items.$add({name:$scope.new_name,description:$scope.new_description, inputType:$scope.new_input, listItems:[""]});
+
+        //Reset Parameters for User Expirience
         $scope.new_name = "";
         $scope.new_description = "";
         $scope.new_input = "";
     }
 
-    $scope.editItem = (id)=>{
-        console.log($scope.edit_item);
-        $scope.items.$save($scope.edit_i).then((ref)=>{
-
+//items.$save(items[edit_i])
+    //Called when someone clicks the Edit Button in the Edit Modal
+    $scope.editItem = ()=>{
+        console.log($scope.items);
+        $scope.items.$save($scope.items[$scope.edit_i]).then((ref)=>{
         })
     }
+
+    //Called when someone clicks the Delete Button on the list
     $scope.delete = (id)=>{
         $scope.items.$remove(id);
     }
 
+    //Called when the Edit Modal is opening
     $('#edit-modal').on('show.bs.modal', function (event) {
       var button = $(event.relatedTarget) // Button that triggered the modal
+      //Grabst the index of the item in Firebase
       $scope.edit_i = button.data('item') // Extract info from data-* attributes
+      //Update Angular to display the correct data
       $scope.$apply();
+
+      //Im not sure what this does, but if I delete it then the modal doesnt open
       var modal = $(this)
     })
 }])

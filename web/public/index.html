@@ -155,12 +155,21 @@
                                 <option value="3">Text Feild</option>
                             </select>
                         </div>
+                        <div ng-show="items[edit_i].inputType == 1">
+                            <div class="input-group mb-3" ng-repeat="i in items[edit_i].listItems track by $index">
+                              <input type="text" class="form-control" ng-model="items[edit_i].listItems[$index]">
+                              <div class="input-group-append">
+                                <button class="btn btn-outline-danger" type="button" ng-click="items[edit_i].listItems.splice($index,1)">Delete</button>
+                              </div>
+                            </div>
+                            <button type="button" class="btn btn-outline-primary" ng-click="items[edit_i].listItems.push(' ')"> Add</button>
+                        </div>
                     </form>
                 </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-warning" ng-click="items.$save(items[edit_i])" data-dismiss="modal">Edit</button>
+                <button type="button" class="btn btn-warning" ng-click="editItem()" data-dismiss="modal">Edit</button>
               </div>
             </div>
           </div>
