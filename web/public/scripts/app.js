@@ -1,4 +1,10 @@
+/* Author: Braden Shill
 
+Simple page that demonstrates 3-way databinding. Open to internet browsers and
+load the website in each. Then, edit the table in some way and watch the real time
+update occure in the other browsers.
+
+*/
 
 
 let fikit = angular.module("fikit",["firebase"]);
@@ -17,8 +23,12 @@ fikit.controller("BoardingProcessManagerController",["$scope","$firebaseArray",(
         $scope.new_description = "";
         $scope.new_input = "";
     }
-    $scope.edit = (id)=>{
 
+    $scope.editItem = (id)=>{
+        console.log($scope.edit_item);
+        $scope.items.$save($scope.edit_i).then((ref)=>{
+
+        })
     }
     $scope.delete = (id)=>{
         $scope.items.$remove(id);
@@ -26,13 +36,8 @@ fikit.controller("BoardingProcessManagerController",["$scope","$firebaseArray",(
 
     $('#edit-modal').on('show.bs.modal', function (event) {
       var button = $(event.relatedTarget) // Button that triggered the modal
-      var item = button.data('item') // Extract info from data-* attributes
-      // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-      // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-      console.log("triggered");
+      $scope.edit_i = button.data('item') // Extract info from data-* attributes
+      $scope.$apply();
       var modal = $(this)
-      modal.find('#edit-title').val(item.name)
-      modal.find('#edit-description').val(item.description)
-      modal.find('#edit-input').val(item.inputType)
     })
 }])

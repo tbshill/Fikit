@@ -69,7 +69,7 @@
                     <td>
                         <div class="btn-group" role="group">
                             <button class="btn btn-danger" type="button" ng-click="delete($index)">Delete</button>
-                            <button class="btn btn-warning" type="button" ng-click="edit(item.$id)" data-item="{{item}}" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                            <button class="btn btn-warning" type="button" ng-click="edit(item.$id)" data-item="{{$index}}" data-toggle="modal" data-target="#edit-modal">Edit</button>
                         </div>
                     </td>
                   </tr>
@@ -139,15 +139,15 @@
                     <form>
                         <div class="form-group">
                             <label>Title</label>
-                            <input id="edit-title" class="form-control" placeholder="Title" ng-model="edit_name"></input>
+                            <input id="edit-title" class="form-control" placeholder="Title" ng-model="items[edit_i].name"></input>
                         </div>
                         <div class="form-group">
                             <label>Description</label>
-                            <input id="edit-description" class="form-control" placeholder="Description" ng-model="edit_description"></input>
+                            <input id="edit-description" class="form-control" placeholder="Description" ng-model="items[edit_i].description"></input>
                         </div>
                         <div class="form-group">
                             <label>Type of Input</label>
-                            <select class="custom-select mr-sm-2" id="edit_input" ng-model="edit_input">
+                            <select class="custom-select mr-sm-2" id="edit-input" ng-model="items[edit_i].inputType">
                                 <option selected>Scale(1-10)</option>
                                 <option value="1">List</option>
                                 <option value="2">Numerical</option>
@@ -160,7 +160,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" ng-click="editItem()">Add</button>
+                <button type="button" class="btn btn-warning" ng-click="items.$save(items[edit_i])" data-dismiss="modal">Edit</button>
               </div>
             </div>
           </div>
