@@ -22,6 +22,8 @@
 
         <!-- AngularFire -->
         <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+        <!-- Angular Sanitize -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.6.9/angular-sanitize.min.js"></script>
 
         <script>
           // Initialize Firebase
@@ -36,7 +38,7 @@
           firebase.initializeApp(config);
         </script>
 
-        <script src="/scripts/app.js"></script>
+        <script src="/angular/scripts/app.js"></script>
 
     </head>
     <body ng-controller="BoardingProcessManagerController">
@@ -106,11 +108,11 @@
                         <div class="form-group">
                             <label>Type of Input</label>
                             <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" ng-model="new_input">
-                                <option selected>Scale(1-10)</option>
-                                <option value="1">List</option>
-                                <option value="2">Numerical</option>
-                                <option value="2">Checkbox</option>
-                                <option value="3">Text Feild</option>
+                                <option selected value="range">Scale(1-10)</option>
+                                <option value="list">List</option>
+                                <option value="number">Numerical</option>
+                                <option value="Checkbox">Checkbox</option>
+                                <option value="text">Text Feild</option>
                             </select>
                         </div>
                     </form>
@@ -148,11 +150,11 @@
                         <div class="form-group">
                             <label>Type of Input</label>
                             <select class="custom-select mr-sm-2" id="edit-input" ng-model="items[edit_i].inputType">
-                                <option selected>Scale(1-10)</option>
+                                <option selected value="range">Scale(1-10)</option>
                                 <option value="1">List</option>
-                                <option value="2">Numerical</option>
-                                <option value="2">Checkbox</option>
-                                <option value="3">Text Feild</option>
+                                <option value="number">Numerical</option>
+                                <option value="Checkbox">Checkbox</option>
+                                <option value="text">Text Feild</option>
                             </select>
                         </div>
                         <div ng-show="items[edit_i].inputType == 1">

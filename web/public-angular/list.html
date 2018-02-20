@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html ng-app="fikit">
+    <head>
+        <title>fixit webapp</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+        <!-- angularjs -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+
+        <!-- AngularFire -->
+        <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+        <!-- Angular Sanitize -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.6.9/angular-sanitize.min.js"></script>
+
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyC8Ks8JyvUj3q0CfAdvLNbtmMSt9TKNL3k",
+            authDomain: "fikit-f63ac.firebaseapp.com",
+            databaseURL: "https://fikit-f63ac.firebaseio.com",
+            projectId: "fikit-f63ac",
+            storageBucket: "fikit-f63ac.appspot.com",
+            messagingSenderId: "893646859592"
+          };
+          firebase.initializeApp(config);
+        </script>
+
+        <script src="/angular/scripts/app.js"></script>
+
+    </head>
+    <body ng-controller="UseBoardingProcessController">
+        <div class="container-fluid">
+            <div class="jumbotron">
+                <h1 class="display-1">Fik It</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>Cleaning List</h1>
+                </div>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col"> Task </th>
+                        <th scope="col"> Input </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="i in list as index">
+                        <div ng-show="i.inputType != 'list'">
+                            <td >{{$index}}</td>
+                            <td>{{i.name}}</td>
+                            <td>
+                                <h1 ng-show="i.inputType == 'list'">LIST</h1>
+                                <input ng-show="i.inputType != 'list'" type="{{i.inputType}}" ng-model="use[$index]" min="0" max="10"></input>
+                            </td>
+                        </div>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button ng-click="log()">Log</button>
+            <button class="btn btn-primary" ng-click="publish()">Publish</button>
+        </div>
+    </body>
+</html>
