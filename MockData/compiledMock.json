@@ -1,0 +1,309 @@
+{
+    "Users":{
+        "RandomId1":{
+            "Firstname": "Braden",
+            "Lastname": "Shill",
+            "Address": {
+                "Street":"1565 N. University Ave",
+                "City":"Provo",
+                "State":"UT",
+                "Zip": "84604"
+            },
+            "SignUpDate":"Feb 20, 2018",
+
+            "Billing":{
+                "CardNumber": "123456780"
+            },
+            "Properties":[
+                "RaNdOmId"
+            ]
+
+        }
+    },
+    
+    "Properties":[
+        {
+            "PropertyName:":"Liv'n The Dream",
+            "BoardingList":"RaNdOmId",
+            "Users":[
+                "RaNdOmId1",
+                "RaNdOmId2",
+                "RaNdOmId3",
+                "RaNdOmId4",
+                "RaNdOmId5"
+            ]
+        }
+    ],
+
+    "BoardingSchemas": {
+			"RaNdOmId": [{
+					"SectionName": "General",
+					"Actions": [{
+							"ActionName": "Date Used",
+							"InputType": "Date"
+						},
+						{
+							"ActionName": "Owner",
+							"InputType": "Options",
+							"OptionItems": [
+								"Jeff and Bonnie Clark",
+								"Bruce and Bonny Coombs",
+								"Jonathan and Laura Higginbotham",
+								"Jake and Vickie Hill",
+								"Matt and Becky Kjar",
+								"Scott and Karen Miles",
+								"Jeffery and Cody Mills",
+								"Shannon and David Norton",
+								"Dan and Kimberly Rasband",
+								"Dan and Julie Roberts",
+								"Rick and Kim Roney",
+								"Bill and Sani Sefcik",
+								"Talmage and Danae Shill",
+								"Steven and Debbie Stowell"
+							]
+						},
+						{
+							"ActionName": "On/Off-boarding",
+							"InputType": "Boolean"
+						}
+					]
+				},
+				{
+					"SectionName": "Exterior",
+					"Actions": [{
+							"ActionName": "Exterior CheckList",
+							"InputType": "Checklist",
+							"Description": "Describe issues needing to be addressed in the Issues section below",
+							"ListItems": [
+								"Exterior the boat clean, free of new dents or scratches, and ready for use.",
+								"No trash or unauthorized storage.",
+								"Bumpers intact and appropriately secured to the boat.",
+								"Slip in working order without issues to the power supply or extension cord.",
+								"Propane adequately filled without concern for leak.",
+								"Portable red gas tanks stored in the propane compartment.",
+								"Yard tools grouped together and stored separate from anchors.",
+								"Anchors in working order and neatly stored in the front hull compartments.",
+								"Garden hose attached to bow faucet and coiled neatly.",
+								"Ropes hanging neatly or stored neatly in upstares compartments.",
+								"Funnels for ropes accessible.",
+								"Mooring whips stored and in working order.",
+								"Two outdoor garbage cans with bags and lids.",
+								"Deck chairs in working order and ready for use.",
+								"Upper kitchen clean and ready for use.",
+								"Upper ice-maker, freezer, and barbeque working",
+								"Upper helm working with functional marine radio",
+								"Navigational lights and spotlight working",
+								"Upper deck stereo and tv working."
+							]
+						},
+						{
+							"ActionName": "Exterior Additional Issues",
+							"InputType": "LongAnswer"
+						}
+					]
+				},
+				{
+					"SectionName": "Interior",
+					"Actions": [{
+							"ActionName": "Interior CheckList (Check items that are NOT TRUE)",
+							"InputType": "Checklist",
+							"Description": "Please review the following checklist carefully. Check items that ARE NOT true or need to be addressed. Describe issues in the Issues Section.",
+							"ListItems": [
+								"Interior clean and ready for use without unauthorized storage.",
+								"Water pressure adequate.",
+								"Basic AYS supplies stocked (toilet paper, paper towels, septic tank chemicals, dish soap, and trash bags).",
+								"Appliances functional without issue.",
+								"Kitchen utensils and cookware ready for use without significant issue.",
+								"Blinds Down.",
+								"TV, DVD, and stereo working with remotes accessible.",
+								"Closet stocked with cleaning supplies, vacuum, and small toolbox.",
+								"Bathrooms (x3) clean with functioning toilets and showers.  No issues.",
+								"Washer and dryer functional and ready for use.",
+								"Lower Helm in working order including marine radio and backup camera."
+							]
+						},
+						{
+							"ActionName": "Interior Additional Issues",
+							"InputType": "LongAnswer"
+						}
+					]
+				},
+				{
+					"SectionName": "Utility Room",
+					"Actions": [{
+							"ActionName": "Utility Room / Hull Checklist (Check items that are NOT TRUE)",
+							"InputType": "Checklist",
+							"ListItems": [
+								"Hull is free of standing water around water inlet or water pump.",
+								"Utility room is clean with supplies organized and free of unauthorized storage.",
+								"Water filter system is functional. No leaks,  UV light on, and replacement filters available.",
+								"Box of boat manuals accessible.",
+								"All 3 septic tanks empty."
+							]
+						},
+						{
+							"ActionName": "Utility Room / Hull Additional Issues",
+							"InputType": "LongAnswer"
+						}
+					]
+				},
+				{
+					"SectionName": "Engine Compartment",
+					"Actions": [{
+							"ActionName": "Engine Compartment Checklist",
+							"InputType": "Engine Compartment Checklist (Check items that are NOT TRUE)",
+							"ListItems": [
+								"Engine compartment clean, without standing water, and ready for use.",
+								"Starboard engine runs and oil level full - not overfilled.",
+								"Port Engine runs and oil level full - not overfilled",
+								"Generator runs. Oil and coolant full.",
+								"Blower fan working.",
+								"Toy-tank pump working, hose intact, and appropriately stowed.",
+								"Fuel tanks topped off.",
+								"Both props free of significant damage."
+							]
+						},
+						{
+							"ActionName": "Engine Compartment Additional Issues",
+							"InputType": "LongAnswer"
+						}
+					]
+				}
+			],
+
+            "RaNdOmId1": [{
+					"SectionName": "General",
+					"Actions": [{
+							"ActionName": "Date Used",
+							"InputType": "Date"
+						},
+						{
+							"ActionName": "Owner",
+							"InputType": "Options",
+							"OptionItems": [
+								"Jeff and Bonnie Clark",
+								"Bruce and Bonny Coombs",
+								"Jonathan and Laura Higginbotham",
+								"Jake and Vickie Hill",
+								"Matt and Becky Kjar",
+								"Scott and Karen Miles",
+								"Jeffery and Cody Mills",
+								"Shannon and David Norton",
+								"Dan and Kimberly Rasband",
+								"Dan and Julie Roberts",
+								"Rick and Kim Roney",
+								"Bill and Sani Sefcik",
+								"Talmage and Danae Shill",
+								"Steven and Debbie Stowell"
+							]
+						},
+						{
+							"ActionName": "On/Off-boarding",
+							"InputType": "Boolean"
+						}
+					]
+				},
+				{
+					"SectionName": "Exterior",
+					"Actions": [{
+							"ActionName": "Exterior CheckList",
+							"InputType": "Checklist",
+							"Description": "Describe issues needing to be addressed in the Issues section below",
+							"ListItems": [
+								"Exterior the boat clean, free of new dents or scratches, and ready for use.",
+								"No trash or unauthorized storage.",
+								"Bumpers intact and appropriately secured to the boat.",
+								"Slip in working order without issues to the power supply or extension cord.",
+								"Propane adequately filled without concern for leak.",
+								"Portable red gas tanks stored in the propane compartment.",
+								"Yard tools grouped together and stored separate from anchors.",
+								"Anchors in working order and neatly stored in the front hull compartments.",
+								"Garden hose attached to bow faucet and coiled neatly.",
+								"Ropes hanging neatly or stored neatly in upstares compartments.",
+								"Funnels for ropes accessible.",
+								"Mooring whips stored and in working order.",
+								"Two outdoor garbage cans with bags and lids.",
+								"Deck chairs in working order and ready for use.",
+								"Upper kitchen clean and ready for use.",
+								"Upper ice-maker, freezer, and barbeque working",
+								"Upper helm working with functional marine radio",
+								"Navigational lights and spotlight working",
+								"Upper deck stereo and tv working."
+							]
+						},
+						{
+							"ActionName": "Exterior Additional Issues",
+							"InputType": "LongAnswer"
+						}
+					]
+				},
+				{
+					"SectionName": "Interior",
+					"Actions": [{
+							"ActionName": "Interior CheckList (Check items that are NOT TRUE)",
+							"InputType": "Checklist",
+							"Description": "Please review the following checklist carefully. Check items that ARE NOT true or need to be addressed. Describe issues in the Issues Section.",
+							"ListItems": [
+								"Interior clean and ready for use without unauthorized storage.",
+								"Water pressure adequate.",
+								"Basic AYS supplies stocked (toilet paper, paper towels, septic tank chemicals, dish soap, and trash bags).",
+								"Appliances functional without issue.",
+								"Kitchen utensils and cookware ready for use without significant issue.",
+								"Blinds Down.",
+								"TV, DVD, and stereo working with remotes accessible.",
+								"Closet stocked with cleaning supplies, vacuum, and small toolbox.",
+								"Bathrooms (x3) clean with functioning toilets and showers.  No issues.",
+								"Washer and dryer functional and ready for use.",
+								"Lower Helm in working order including marine radio and backup camera."
+							]
+						},
+						{
+							"ActionName": "Interior Additional Issues",
+							"InputType": "LongAnswer"
+						}
+					]
+				},
+				{
+					"SectionName": "Utility Room",
+					"Actions": [{
+							"ActionName": "Utility Room / Hull Checklist (Check items that are NOT TRUE)",
+							"InputType": "Checklist",
+							"ListItems": [
+								"Hull is free of standing water around water inlet or water pump.",
+								"Utility room is clean with supplies organized and free of unauthorized storage.",
+								"Water filter system is functional. No leaks,  UV light on, and replacement filters available.",
+								"Box of boat manuals accessible.",
+								"All 3 septic tanks empty."
+							]
+						},
+						{
+							"ActionName": "Utility Room / Hull Additional Issues",
+							"InputType": "LongAnswer"
+						}
+					]
+				},
+				{
+					"SectionName": "Engine Compartment",
+					"Actions": [{
+							"ActionName": "Engine Compartment Checklist",
+							"InputType": "Engine Compartment Checklist (Check items that are NOT TRUE)",
+							"ListItems": [
+								"Engine compartment clean, without standing water, and ready for use.",
+								"Starboard engine runs and oil level full - not overfilled.",
+								"Port Engine runs and oil level full - not overfilled",
+								"Generator runs. Oil and coolant full.",
+								"Blower fan working.",
+								"Toy-tank pump working, hose intact, and appropriately stowed.",
+								"Fuel tanks topped off.",
+								"Both props free of significant damage."
+							]
+						},
+						{
+							"ActionName": "Engine Compartment Additional Issues",
+							"InputType": "LongAnswer"
+						}
+					]
+				}
+			]
+		}
+}

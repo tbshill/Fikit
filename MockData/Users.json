@@ -1,0 +1,23 @@
+{
+    "Users":{
+        "RandomId1":{
+            "Firstname": "Braden",
+            "Lastname": "Shill",
+            "Address": {
+                "Street":"1565 N. University Ave",
+                "City":"Provo",
+                "State":"UT",
+                "Zip": "84604"
+            },
+            "SignUpDate":"Feb 20, 2018",
+
+            "Billing":{
+                "CardNumber": "123456780"
+            },
+            "Properties":[
+                "RaNdOmId"
+            ]
+
+        }
+    }
+}
